@@ -1,0 +1,5 @@
+#如若设置jvm启动参数 -Dspring.profiles.active=prod 优先级更高，会忽略此处的配置
+spring:
+  profiles:
+    active:
+      - prod
