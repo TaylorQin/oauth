@@ -56,7 +56,7 @@ public class AuthController {
             throw new ApiException("您现在没有权限生成对应的AccessToken");
         }
         // 从redis中删除之前的accessToken
-        if (StringUtils.isNoneBlank(appResult.getAccessToken()))
+        if (StringUtils.isNotBlank(appResult.getAccessToken()))
         {
             baseRedisService.delKey(appResult.getAccessToken());
         }
